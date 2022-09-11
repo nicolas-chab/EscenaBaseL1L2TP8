@@ -7,7 +7,7 @@ public class pickupobject : MonoBehaviour
     public Transform destination;
     private void OnMouseDown()
     {
-        GetComponent<BoxCollider>().enabled = false;
+        GetComponent<BoxCollider>().enabled = true;
         GetComponent<Rigidbody>().useGravity = false;
         this.transform.position = destination.position;
         this.transform.parent = GameObject.Find("destinationofobj").transform;

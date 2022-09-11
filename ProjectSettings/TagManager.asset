@@ -8,6 +8,11 @@ TagManager:
   - mesa
   - Canpickup
   - NPC
+  - componentes
+  - teclado
+  - mouse
+  - monitor
+  - gabinete
   layers:
   - Default
   - TransparentFX

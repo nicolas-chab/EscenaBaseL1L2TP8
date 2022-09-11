@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: NPCdata
   m_EditorClassIdentifier: 
   dialoguelines:
-  - hola
-  - necesitamos ayuda
+  - necesitamos tu ayuda
+  - alguien se esta robando algunas partes de compus, podrias encontrarlas?
   - gracias
   misionempezada: 0
   contadorcomponentes: 0

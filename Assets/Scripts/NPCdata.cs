@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-[CreateAssetMenu(fileName ="NPCdata",menuName ="Crear npc data")]
+[CreateAssetMenu(fileName = "NPCdata", menuName = "Crear npc data")]
 public class NPCdata : ScriptableObject
 {
     public string[] dialoguelines;

@@ -11,7 +11,8 @@ public class dialoguemanager : MonoBehaviour
     [SerializeField] string[] frasesDialogo;
     [SerializeField] int posicionFrase;
     [SerializeField] bool hasTalked;
-    [SerializeField] bool misionempezada;
+    public static bool misionempezadadialogue;
+    public int contadordecomponentes; 
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +23,12 @@ public class dialoguemanager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.E) && hasTalked == false)
+        {
+            NextFrase();
+        }
+        terminarmision();
+        contadordecomponentes = prefabscount.contadordecomponentesparanpc;
     }
 
     void OnTriggerEnter(Collider other)
@@ -30,22 +36,30 @@ public class dialoguemanager : MonoBehaviour
         if (other.gameObject.CompareTag("NPC"))
         {
             frasesDialogo = other.gameObject.GetComponent<NPCDIALOGUE>().data.dialoguelines;
-            misionempezada = other.gameObject.GetComponent<NPCDIALOGUE>().data.misionempezada;
+            
+
             dialogueUI.SetActive(true);
 
             if (!hasTalked)
             {
                 //al entrar activa la UI de dialogo
-                textoDelDialogo.text = "Hola forastero";
+                textoDelDialogo.text = "Hola estudiante";
             }
 
             else
             {
                 textoDelDialogo.text = "Ve a buscar las cosas!";
+               
             }
         }
     }
-
+    private void OnCollisionEnter(Collision other)
+    {
+        if (other.gameObject.CompareTag("componentes"))
+        {
+            contadordecomponentes++;
+        }
+    }
     void OnTriggerExit(Collider other)
     {
         if (other.gameObject.CompareTag("NPC"))
@@ -57,6 +71,9 @@ public class dialoguemanager : MonoBehaviour
 
     public void NextFrase()
     {
+
+        
+
         if (posicionFrase < frasesDialogo.Length)
         {
             textoDelDialogo.text = frasesDialogo[posicionFrase];
@@ -72,8 +89,15 @@ public class dialoguemanager : MonoBehaviour
         {
             dialogueUI.SetActive(false);
             hasTalked = true;
-            misionempezada = true;
+            misionempezadadialogue = true;
         }
 
+    }
+    void terminarmision()
+    {
+        if (contadordecomponentes == 4)
+        {
+            misionempezadadialogue = false;
+        }
     }
 }
