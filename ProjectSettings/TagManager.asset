@@ -7,6 +7,7 @@ TagManager:
   - Silla
   - mesa
   - Canpickup
+  - NPC
   layers:
   - Default
   - TransparentFX

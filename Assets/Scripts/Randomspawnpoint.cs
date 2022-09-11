@@ -4,48 +4,58 @@ using UnityEngine;
 
 public class Randomspawnpoint : MonoBehaviour
 {
-    //create an array of spawn points, assigned in inspector 
-    public Transform[] collectableSpawnPoints = new Transform[2];
 
-    //create an array of collectables to choose from
-    public GameObject[] items = new GameObject[4];
+    public Transform[] spawnpoints;
+    public GameObject[] prefabs;
+   // public GameObject Mouse;
+     //public GameObject keyboard;
+    //public GameObject gabinete;
+  //  public GameObject monitor;
+     int amountofthings=4;
+    [SerializeField] bool misionempezada;
 
-    // Use this for initialization
-    void Start()
+
+
+    private void Start()
     {
-        SpawnCollectables();
+        //poner el bool mision empezada
+        //spawnmouse();
+        //spawnkeyboard();
+        //spawngabinete();
+        // spawnmonitor();
+        Spawn();
     }
 
-   
-
-    //selects spawn point
-    public Transform GetCollectableSpawnPoint()
+    public void Spawn()
     {
-        //randomly selects a point out of the array
-        int index = Random.Range(0, collectableSpawnPoints.Length);
-        //returns the selected point
-        return collectableSpawnPoints[index];
-    }
 
-    //selects object to spawn
-    public GameObject GetCollectable()
-    {
-        //selects one of the items from the array
-        int index = Random.Range(0, items.Length);
-        //returns the object selected
-        return items[index];
-    }
+        if (misionempezada == true) { 
+        List<Transform> freeSpawnPoints = new List<Transform>(spawnpoints);
+        List<GameObject> Unusedobjects = new List<GameObject>(prefabs);
+        
+      
+        for (int i=1; i <= amountofthings; i++)
+        {
+           
+           
+            
+            if (Unusedobjects.Count < 0)
+             { 
+                    return; // Not enough spawn points
+             }
+            else
+            {
+                
+                int index = Random.Range(0, freeSpawnPoints.Count-1);
+                freeSpawnPoints.RemoveAt(index); // remove the spawnpoint from our temporary list
+                int objectsindex = Random.Range(0, Unusedobjects.Count-1);
+                Unusedobjects.RemoveAt(objectsindex);
+                Instantiate(prefabs[objectsindex], freeSpawnPoints[index].position, freeSpawnPoints[index].rotation);
+            }
 
-    // spawns the random object on the random point
-    public GameObject SpawnCollectables()
-    {
-        //selects the spawn point
-        Transform spawnPoint = GetCollectableSpawnPoint();
-        //selects the object
-        GameObject collectable = GetCollectable();
-        //creates the object selected on the point selected
-        GameObject c = Instantiate(collectable, spawnPoint.position, spawnPoint.rotation) as GameObject;
-        //spawns the object
-        return c;
+
+        }
+
+        }
     }
 }
