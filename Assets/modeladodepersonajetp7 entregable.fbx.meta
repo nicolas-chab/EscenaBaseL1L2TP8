@@ -1,0 +1,191 @@
+fileFormatVersion: 2
+guid: 5bd893a53bd1ef044bd6c7c5daf05750
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Armature
+    100002: Bone
+    100004: Bone.002
+    100006: Bone.002_end
+    100008: Bone.021
+    100010: Bone.022
+    100012: Bone.023
+    100014: Bone.024
+    100016: Bone.024_end
+    100018: Bone.025
+    100020: Bone.026
+    100022: Bone.026_end
+    100024: Bone_end
+    100026: Cube
+    100028: L.ANTEBRAZO
+    100030: L.BICEP
+    100032: L.DEDOANULAR
+    100034: L.DEDOANULAR_end
+    100036: L.DEDOFAKIU
+    100038: L.DEDOFAKIU_end
+    100040: L.DEDOG
+    100042: L.DEDOG_end
+    100044: L.DEDOIND
+    100046: L.DEDOIND_end
+    100048: "L.DEDOME\xD1IQUE"
+    100050: "L.DEDOME\xD1IQUE_end"
+    100052: L.HOMBRO
+    100054: L.PALMA
+    100056: //RootNode
+    100058: PECHO
+    100060: PELVIS
+    100062: R.ANTEBRAZO
+    100064: R.BICEP
+    100066: R.DEDOANULAR
+    100068: R.DEDOANULAR_end
+    100070: R.DEDOFAKIU
+    100072: R.DEDOFAKIU_end
+    100074: R.DEDOG
+    100076: R.DEDOG_end
+    100078: R.DEDOINDICE
+    100080: R.DEDOINDICE_end
+    100082: "R.DEDOME\xD1IQUE"
+    100084: "R.DEDOME\xD1IQUE_end"
+    100086: R.PALMA
+    100088: R.SHOULDER
+    400000: Armature
+    400002: Bone
+    400004: Bone.002
+    400006: Bone.002_end
+    400008: Bone.021
+    400010: Bone.022
+    400012: Bone.023
+    400014: Bone.024
+    400016: Bone.024_end
+    400018: Bone.025
+    400020: Bone.026
+    400022: Bone.026_end
+    400024: Bone_end
+    400026: Cube
+    400028: L.ANTEBRAZO
+    400030: L.BICEP
+    400032: L.DEDOANULAR
+    400034: L.DEDOANULAR_end
+    400036: L.DEDOFAKIU
+    400038: L.DEDOFAKIU_end
+    400040: L.DEDOG
+    400042: L.DEDOG_end
+    400044: L.DEDOIND
+    400046: L.DEDOIND_end
+    400048: "L.DEDOME\xD1IQUE"
+    400050: "L.DEDOME\xD1IQUE_end"
+    400052: L.HOMBRO
+    400054: L.PALMA
+    400056: //RootNode
+    400058: PECHO
+    400060: PELVIS
+    400062: R.ANTEBRAZO
+    400064: R.BICEP
+    400066: R.DEDOANULAR
+    400068: R.DEDOANULAR_end
+    400070: R.DEDOFAKIU
+    400072: R.DEDOFAKIU_end
+    400074: R.DEDOG
+    400076: R.DEDOG_end
+    400078: R.DEDOINDICE
+    400080: R.DEDOINDICE_end
+    400082: "R.DEDOME\xD1IQUE"
+    400084: "R.DEDOME\xD1IQUE_end"
+    400086: R.PALMA
+    400088: R.SHOULDER
+    2100000: remera
+    4300000: Cube
+    7400000: Armature|ArmatureAction
+    9500000: //RootNode
+    13700000: Cube
+  externalObjects:
+  - first:
+      type: UnityEngine:Texture2D
+      assembly: UnityEngine.CoreModule
+      name: pintura
+    second: {fileID: 2800000, guid: 31608c3e9bd44b34dba15d7efd10ec3c, type: 3}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    useSRGBMaterialColor: 1
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+    legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
+    blendShapeNormalImportMode: 1
+    normalSmoothingSource: 0
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
