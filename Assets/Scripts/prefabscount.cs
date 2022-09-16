@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class prefabscount : MonoBehaviour
 {
-   
+    public GameObject puerta;
     public static int contadordecomponentesparanpc=0;
     // Start is called before the first frame update
     void Start()
@@ -19,6 +19,7 @@ public class prefabscount : MonoBehaviour
         if (contadordecomponentesparanpc >= 4)
         {
             Destroy(gameObject);
+            Destroy(puerta);
         }
     }
     private void OnCollisionEnter(Collision other)

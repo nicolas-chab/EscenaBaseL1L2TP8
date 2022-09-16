@@ -7,30 +7,43 @@ public class Randomspawnpoint : MonoBehaviour
 
     public Transform[] spawnpoints;
     public GameObject[] prefabs;
-    // public GameObject Mouse;
-    //public GameObject keyboard;
-    //public GameObject gabinete;
-    //  public GameObject monitor;
-    int amountofthings = 4;
-    public bool misionempezada;
+    int randomspawnpoint;
+    int randomprefab;
+    public bool misionempezada=false;
+    public float timespawn;
+    bool timeon=false;
 
 
     
     private void Start()
     {
-
+        
         //poner el bool mision empezada
         //spawnmouse();
         //spawnkeyboard();
         //spawngabinete();
         // spawnmonitor();
-
+        
     }
 
     private void Update()
     {
+        if (misionempezada == true)
+        {
+            timeon = true;
+            if (timespawn > 0)
+            {
+                InvokeRepeating("Spawn", 0f, 1000000f);
+                timespawn -= Time.deltaTime;
+            }
+            else
+            {
+                CancelInvoke("spawn");
+            }
+        }
         misionempezada = dialoguemanager.misionempezadadialogue;
         //Spawn();
+       
     }
     
     public void Spawn()
@@ -39,33 +52,22 @@ public class Randomspawnpoint : MonoBehaviour
         if (misionempezada == true)
         {
 
-            List<Transform> freeSpawnPoints = new List<Transform>(spawnpoints);
-            List<GameObject> Unusedobjects = new List<GameObject>(prefabs);
+            randomspawnpoint = Random.Range(0, spawnpoints.Length);
+            randomprefab = Random.Range(0, prefabs.Length);
+            Instantiate(prefabs[randomprefab], spawnpoints[randomspawnpoint].position, Quaternion.identity);
+           
+         
+            
 
 
-            for (int i = 1; i <= amountofthings; i++)
-            {
 
 
-
-                if (freeSpawnPoints.Count < 0)
-                {
-                    return; // Not enough spawn points
-                }
-                else
-                {
-
-                    int index = Random.Range(0, freeSpawnPoints.Count);
-                    freeSpawnPoints.RemoveAt(index); // remove the spawnpoint from our temporary list
-                    int objectsindex = Random.Range(0, Unusedobjects.Count);
-                    Unusedobjects.RemoveAt(objectsindex);
-                    Instantiate(prefabs[objectsindex], freeSpawnPoints[index].position, freeSpawnPoints[index].rotation);
-                    //las listas no estan funcionando como deberian, preguntar
-                }
-
-
-            }
         }
-       }
- }
+
+
+    }
+   
+}
+       
+ 
 
